@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.intern.xing.sideproject.ui.main.MainViewModel
+import kotlinx.android.synthetic.main.fragment_menu_screen.*
 
 class MenuScreen : Fragment() {
 
@@ -25,8 +27,8 @@ class MenuScreen : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 //        goToAccountBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.toAccount))
 //        goToSettingBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.toSetting))
-
-
+        create_account_btn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_menuScreen_to_createAccount))
+        login_btn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_menuScreen_to_loginScreen))
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
