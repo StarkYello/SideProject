@@ -34,28 +34,20 @@
             android:layout_alignParentLeft="true"
             android:layout_centerInParent="true"
             android:adjustViewBounds="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="150dp"
             android:layout_marginLeft="40dp"/>
         <ImageButton
-            android:id="@+id/google_btn"
+            android:id="@+id/create_account_btn"
             android:background="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/google_login"
+            android:src="@drawable/create_account"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:adjustViewBounds="true"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="150dp"
             android:layout_marginRight="40dp"
             />
     </RelativeLayout>
-    <ImageButton
-        android:id="@+id/create_account_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/create_account"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
-        />
+
 </LinearLayout>

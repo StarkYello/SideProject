@@ -1,5 +1,6 @@
 package com.intern.xing.sideproject
 
+
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,34 +8,34 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import com.intern.xing.sideproject.objects.Post
 import com.intern.xing.sideproject.objects.User
 import com.intern.xing.sideproject.ui.main.MainViewModel
-import kotlinx.android.synthetic.main.fragment_menu_screen.*
+import kotlinx.android.synthetic.main.fragment_create_account.*
 
-class MenuScreen : Fragment() {
 
-    companion object {
-        fun newInstance() = MenuScreen()
-    }
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 
+/**
+ * A simple [Fragment] subclass.
+ *
+ */
+class CreateAccount : Fragment() {
     private lateinit var viewModel: MainViewModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
-        return inflater.inflate(R.layout.fragment_menu_screen, container, false)
+                              savedInstanceState: Bundle?): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_create_account, container, false)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        goToAccountBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.toAccount))
-//        goToSettingBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.toSetting))
-        create_account_btn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_menuScreen_to_createAccount))
-        login_btn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_menuScreen_to_loginScreen))
 
+        create_account_finish_btn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_createAccount_to_tagScreen))
 
     }
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 //        var list= ArrayList<String>()
@@ -44,15 +45,7 @@ class MenuScreen : Fragment() {
 //
 //
 //        var ajksdfhkxcv= User(list, "bala@gmail.com","king the second","ajksdfhkxcv")
-        val newPost: Post = Post(
-                owner = "tHntIgEA5EbwWYtqznzVFcBQIch1",
-                postDescription = "test4\t",
-                postTags = listOf("android","python"),
-                postTitle = "Test4"
-                )
-
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        viewModel.fireBaseUtils.addPost(newPost)
 //        viewModel.fireBaseUtils.addUser(ajksdfhkxcv)
     }
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".loginScreen">
+    tools:context=".LoginScreen">
 
     <ImageView
         android:id="@+id/imageView"
@@ -87,7 +87,7 @@
             />
     </RelativeLayout>
     <ImageButton
-        android:id="@+id/create_account_btn"
+        android:id="@+id/account_login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

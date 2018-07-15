@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".createAccount">
+    tools:context=".CreateAccount">
 
     <ImageView
         android:id="@+id/imageView"
@@ -18,7 +18,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingHorizontal="40dp"
         android:textColorHint="@color/text_black"
         >
@@ -39,7 +39,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingHorizontal="40dp"
         android:textColorHint="@color/text_black"
 
@@ -61,7 +61,7 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:paddingHorizontal="40dp"
         android:textColorHint="@color/text_black"
 
@@ -81,12 +81,12 @@
 
     </android.support.design.widget.TextInputLayout>
     <ImageButton
-        android:id="@+id/create_account_btn"
+        android:id="@+id/create_account_finish_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/create_account"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:background="@color/white"
         />
 
