@@ -1,93 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/gradientbackgroundmdpi"
     tools:context=".CreateAccount">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/project_icon"
         android:layout_gravity="center"
+        android:layout_margin="@android:dimen/app_icon_size"
         android:adjustViewBounds="true"
-        />
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
+        android:src="@drawable/logo_enhanced"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:theme="@style/EditTextTheme"
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:paddingHorizontal="40dp"
-        android:textColorHint="@color/text_black"
-        >
+        android:layout_marginTop="100dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
         <EditText
+            android:id="@+id/username_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:maxLength="20"
             android:hint="Username"
-            android:textColorHint="@color/black"
-            android:theme="@style/EditTextTheme"
             android:imeOptions="actionDone"
             android:inputType="textCapSentences"
+            android:maxLength="20"
             android:singleLine="true"
-            />
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:theme="@style/EditTextTheme" />
 
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:paddingHorizontal="40dp"
-        android:textColorHint="@color/text_black"
+        android:layout_marginTop="8dp"
+        android:theme="@style/EditTextTheme"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
-        >
         <EditText
+            android:id="@+id/email_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:maxLength="20"
             android:hint="Email"
-            android:textColorHint="@color/black"
-            android:theme="@style/EditTextTheme"
             android:imeOptions="actionDone"
             android:inputType="textEmailAddress"
+            android:maxLength="20"
             android:singleLine="true"
-            />
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:theme="@style/EditTextTheme" />
 
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:paddingHorizontal="40dp"
-        android:textColorHint="@color/text_black"
+        android:layout_marginTop="8dp"
+        android:theme="@style/EditTextTheme"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
-        >
         <EditText
+            android:id="@+id/password_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:maxLength="20"
             android:hint="Password"
-            android:textColorHint="@color/black"
-            android:theme="@style/EditTextTheme"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
+            android:maxLength="20"
             android:singleLine="true"
-            />
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:theme="@style/EditTextTheme" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
+
     <ImageButton
         android:id="@+id/create_account_finish_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@null"
         android:src="@drawable/create_account"
-        android:layout_marginTop="20dp"
-        android:background="@color/white"
-        />
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/sign_up_text"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/white"
+        android:background="#E82929"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/create_account_finish_btn"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

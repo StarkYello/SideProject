@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F7F7F7"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/top_relative"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/post_solution_owner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="By: "
+            android:textColor="@color/black"
+            android:textSize="21dp"
+            android:textStyle="normal"
+            />
+
+        <TextView
+            android:id="@+id/post_solution_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Time Stamp"
+            android:textColor="@color/black"
+            android:textSize="11dp" />
+    </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/center_constraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="@id/top_relative"
+            app:layout_constraintRight_toRightOf="@id/top_relative"
+            app:layout_constraintTop_toBottomOf="@id/top_relative"
+            >
+
+            <TextView
+                android:id="@+id/post_solution_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="30dp"
+                android:text="Loremipasdasdzxczxczxczxczxczxczxczczxczxcasdasdasdasdasdasdasdasdasdasdasdasssum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Sed do eiusmod tempor incididunt ut et dolore magna aliqua."
+                android:textColor="@color/black"
+                android:textSize="14dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/up_vote"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                android:src="@drawable/gray_up_vote"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:id="@+id/up_vote"
+                android:layout_marginHorizontal="20dp"
+
+                app:layout_constraintTop_toTopOf="@id/post_solution_description"
+                app:layout_constraintLeft_toRightOf="@id/post_solution_description"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/post_solution_score"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34"
+                android:textSize="14dp"
+                android:id="@+id/post_solution_score"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintTop_toBottomOf="@id/up_vote"
+                app:layout_constraintLeft_toLeftOf="@id/up_vote"
+                app:layout_constraintRight_toRightOf="@id/up_vote"
+                app:layout_constraintBottom_toTopOf="@id/down_vote"
+                />
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="21dp"
+                android:src="@drawable/gray_down_vote"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:id="@+id/down_vote"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/post_solution_score"
+                app:layout_constraintLeft_toLeftOf="@id/up_vote"
+                app:layout_constraintRight_toRightOf="@id/up_vote"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/center_constraint"
+        app:layout_constraintTop_toBottomOf="@id/center_constraint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/checked_icon"
+            android:id="@+id/post_solution_check"
+            android:layout_alignParentLeft="true"
+            android:visibility="invisible"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/post_solution_replies"
+            android:layout_alignRight="@id/reply_triangle"
+            android:layout_marginRight="13dp"
+            android:textSize="15dp"
+            android:textColor="@color/red"
+            android:text="7 Replies"
+            android:layout_centerVertical="true"
+
+            />
+        <ImageView
+            android:id="@+id/reply_triangle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/replies_triangle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

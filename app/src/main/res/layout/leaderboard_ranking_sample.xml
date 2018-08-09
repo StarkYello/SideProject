@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="#F7F7F7"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/ranking_number"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bob Johnson"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:id="@+id/ranking_name"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:id="@+id/ranking_points"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        />
+</RelativeLayout>

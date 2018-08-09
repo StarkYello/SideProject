@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#F7F7F7"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="150dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/reply_popup_recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reply_input_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_alignParentTop="true"
+        app:cardBackgroundColor="#EAEAEA"
+        app:cardCornerRadius="8dp"
+        >
+
+        <EditText
+            android:id="@+id/reply_input"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/android_transparent"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:textStyle="normal"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/reply_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/reply_btn"
+        android:layout_alignParentBottom="true"
+
+
+        />
+    </RelativeLayout>
+</RelativeLayout>
